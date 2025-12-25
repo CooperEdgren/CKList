@@ -1,4 +1,4 @@
-const CHANNELS_URL = '/channels.json';
+const CHANNELS_URL = 'channels.json';
 
 // small cache for nameSvg fetches
 const nameSvgCache = new Map();
@@ -99,7 +99,7 @@ function debounce(fn, wait=150){
 
 // register service worker
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/service-worker.js').then(reg=>{
+  navigator.serviceWorker.register('service-worker.js').then(reg=>{
     console.log('SW registered',reg.scope);
   }).catch(err=>console.warn('SW failed',err));
 }

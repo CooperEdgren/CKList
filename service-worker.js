@@ -1,12 +1,12 @@
 const CACHE_NAME = 'tvguide-v1';
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/channels.json',
-  '/manifest.json',
-  '/icons/default.svg'
+  './',
+  'index.html',
+  'styles.css',
+  'app.js',
+  'channels.json',
+  'manifest.json',
+  'icons/default.svg'
 ];
 
 self.addEventListener('install', evt => {
@@ -24,7 +24,7 @@ self.addEventListener('fetch', evt => {
   const req = evt.request;
   if(req.method !== 'GET') return;
   // Use network-first for channels.json so channel edits (and nameSvg changes) appear quickly.
-  if(new URL(req.url).pathname === '/channels.json'){
+  if(new URL(req.url).pathname.endsWith('channels.json')){
     evt.respondWith(
       fetch(req).then(resp => {
         if(resp && resp.status === 200){
