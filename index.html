@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Satellite TV Guide</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="theme-color" content="#1e293b">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <h1>Satellite TV Guide</h1>
+        <button id="refresh" title="Refresh channels" aria-label="Refresh channels">⟳</button>
+      </div>
+      <input id="search" placeholder="Search channels or numbers" aria-label="Search" />
+    </header>
+
+    <main>
+      <section id="channels" class="grid" aria-live="polite"></section>
+    </main>
+
+    <template id="channel-template">
+      <article class="channel">
+        <img class="icon" alt="channel icon" />
+        <div class="meta">
+          <div class="title-row">
+            <div class="name-wrap">
+              <div class="name-svg" aria-hidden="true"></div>
+              <h2 class="name"></h2>
+            </div>
+            <span class="number"></span>
+          </div>
+          <p class="desc">No schedule configured</p>
+        </div>
+      </article>
+    </template>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

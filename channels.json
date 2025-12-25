@@ -1,0 +1,9 @@
+{
+  "channels": [
+    {"number":"101","name":"NBC","icon":"/icons/NBCPeacock.svg","desc":"24/7 world news"},
+    {"number":"202","name":"CBS","icon":"/icons/CBS_Eyemark.svg","desc":"Latest films and classics"},
+    {"number":"303","name":"ABC","icon":"/icons/ABCLogo.svg","desc":"Live sports events"},
+    {"number":"404","name":"FOX","icon":"/icons/FoxWordmark.svg","desc":"Kids shows and cartoons"},
+    {"number":"505","name":"PBS","icon":"/icons/PBSLogo.svg","desc":"Educational programs"}
+  ]
+}
